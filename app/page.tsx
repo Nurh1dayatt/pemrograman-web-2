@@ -29,10 +29,10 @@ const mahasiswa = await prisma.tb_mahasiswa.findMany({
     <table className='w-full'>
         <thead>
           <tr className='bg-slate-300 h-12 '>
-            <th className='w-10% border border-slate-700'>Aksi</th>
             <th className='w-10% border border-slate-700'>NPM</th>
             <th className='w-1/2 border border-slate-700'>Nama</th>
             <th className='w-30% border border-slate-700'>Prodi</th>
+            <th className='w-10% border border-slate-700'>Aksi</th>
           </tr>
         </thead>
         <tbody>
@@ -44,6 +44,9 @@ const mahasiswa = await prisma.tb_mahasiswa.findMany({
       // </div>
 
       <tr>
+        <td className='border border-slate-700 px-2.5 text-center'>{data.npm}</td>
+        <td className='border border-slate-700 px-2.5 text-justify'>{data.nama}</td>
+        <td className='border border-slate-700 px-2.5 text-center'>{data.prodi}</td>
         <td className='border border-slate-700 p-2.5 text-center'>
           {/* icon edit */}
           <Link href={"/"} className='bg-sky-500 text-white py-5X px-2.5 rounded-md mr-1 text-sm' title='Ubah Data'>
@@ -55,9 +58,6 @@ const mahasiswa = await prisma.tb_mahasiswa.findMany({
           <FontAwesomeIcon icon={faTrashCan}></FontAwesomeIcon>
           </Link>
         </td>
-        <td className='border border-slate-700 px-2.5 text-center'>{data.npm}</td>
-        <td className='border border-slate-700 px-2.5 text-justify'>{data.nama}</td>
-        <td className='border border-slate-700 px-2.5 text-center'>{data.prodi}</td>
       </tr>
     ))} 
     </tbody>
