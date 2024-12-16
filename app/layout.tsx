@@ -3,10 +3,10 @@ import "./globals.css";
 
 // import fontAwesome
 import "@fortawesome/fontawesome-svg-core/styles.css"
-export const metadata = {
-  title: "Nurhidayat",
-  description: "Made with love by Choky",
-};
+// export const metadata = {
+//   title: "Nurhidayat",
+//   description: "Made with love by Choky",
+// };
 
 export default function RootLayout({
   children,
@@ -14,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" data-theme="corporate">
       <body>
 
         {/* area header */}
@@ -43,8 +43,8 @@ export default function RootLayout({
 
         {/* area content */}
         <section className="m-5">
-        {children}
-        </section> 
+          {children}
+        </section>
 
         {/* area footer */}
         <footer className="flex justify-center  bg-color1 text-color2 py-15X">
