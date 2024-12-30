@@ -79,7 +79,7 @@ export default function Rootpage() {
                   <Link href={`/edit/${btoa(data?.npm || "")}`}>
                     <FontAwesomeIcon
                       icon={faPencil}
-                      className="bg-blue-500 text-white p-2 mr-1 rounded-full hover:bg-blue-700"
+                      className="bg-red-500 text-white p-2 mr-1 rounded-full hover:bg-blue-700"
                       title="Ubah Data"
                     />
                   </Link>
